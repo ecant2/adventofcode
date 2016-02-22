@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B7B21E77-B201-4F9E-A39A-106F1F97B94E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>test</RootNamespace>
+    <AssemblyName>test</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FluentAssertions, Version=4.2.1.0, Culture=neutral, PublicKeyToken=33f2691a05b67b6a, processorArchitecture=MSIL">
+      <HintPath>..\packages\FluentAssertions.4.2.1\lib\net45\FluentAssertions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FluentAssertions.Core, Version=4.2.1.0, Culture=neutral, PublicKeyToken=33f2691a05b67b6a, processorArchitecture=MSIL">
+      <HintPath>..\packages\FluentAssertions.4.2.1\lib\net45\FluentAssertions.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="xunit.abstractions, Version=2.0.0.0, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
+      <HintPath>..\packages\xunit.abstractions.2.0.0\lib\net35\xunit.abstractions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="xunit.assert, Version=2.1.0.3179, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
+      <HintPath>..\packages\xunit.assert.2.1.0\lib\dotnet\xunit.assert.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="xunit.core, Version=2.1.0.3179, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
+      <HintPath>..\packages\xunit.extensibility.core.2.1.0\lib\dotnet\xunit.core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="xunit.execution.desktop, Version=2.1.0.3179, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
+      <HintPath>..\packages\xunit.extensibility.execution.2.1.0\lib\net45\xunit.execution.desktop.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AndInstructionTests.cs" />
+    <Compile Include="CircuitSignalCalculatorTests.cs" />
+    <Compile Include="IdealLightingConfigurationCalculatorTests\IdealLightingConfigurationCalculatorTests.cs" />
+    <Compile Include="DeliveryCalculatorTests\NavigationTests.cs" />
+    <Compile Include="FloorCalculatorTests\MoveTests.cs" />
+    <Compile Include="IdealLightingConfigurationCalculatorTests\ToggleInstructionTests.cs" />
+    <Compile Include="IdealLightingConfigurationCalculatorTests\TurnOffInstructionTests.cs" />
+    <Compile Include="IdealLightingConfigurationCalculatorTests\TurnOnInstructionTests.cs" />
+    <Compile Include="InstructionFactoryTests.cs" />
+    <Compile Include="LshiftInstructionTests.cs" />
+    <Compile Include="NotInstructionTests.cs" />
+    <Compile Include="OrInstructionTests.cs" />
+    <Compile Include="RshiftInstructionTests.cs" />
+    <Compile Include="SignalInstructionTests.cs" />
+    <Compile Include="WrappingMaterialCalculatorTests\BoxTests.cs" />
+    <Compile Include="DeliveryCalculatorTests\CoordinatesTests.cs" />
+    <Compile Include="DeliveryCalculatorTests\DeliveryCalculatorTests.cs" />
+    <Compile Include="DeliveryCalculatorTests\NavigationProcessorTests.cs" />
+    <Compile Include="NiceStringCalculatorTests\ForbiddenSubstringPropertyTests.cs" />
+    <Compile Include="MD5HashesCalculatorTests\MD5HashesCalculatorTests.cs" />
+    <Compile Include="NiceStringCalculatorTests\PatternMatchesTwiceWithoutOverlapPropertyTests.cs" />
+    <Compile Include="NiceStringCalculatorTests\MinimalPluralityCountPropertyTests.cs" />
+    <Compile Include="NiceStringCalculatorTests\MinimalVowelCountPropertyTests.cs" />
+    <Compile Include="NiceStringCalculatorTests\NiceStringCalculatorTests.cs" />
+    <Compile Include="NiceStringCalculatorTests\RepetitionOnNextPlacePropertyTests.cs" />
+    <Compile Include="WrappingMaterialCalculatorTests\WrappingMaterialCalculatorTests.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="FloorCalculatorTests\FloorCalculatorTests.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AdventOfCode\AdventOfCode.csproj">
+      <Project>{3fc22fa9-5243-439c-8f35-18cf4f5e22c8}</Project>
+      <Name>AdventOfCode</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
