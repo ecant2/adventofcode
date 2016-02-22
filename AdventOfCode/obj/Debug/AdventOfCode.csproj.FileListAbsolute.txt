@@ -10,3 +10,9 @@ C:\Users\ecant\Documents\Visual Studio 2015\Projects\AdventOfCode\AdventOfCode\b
 C:\Users\ecant\Documents\Visual Studio 2015\Projects\AdventOfCode\AdventOfCode\obj\Debug\AdventOfCode.csprojResolveAssemblyReference.cache
 C:\Users\ecant\Documents\Visual Studio 2015\Projects\AdventOfCode\AdventOfCode\obj\Debug\AdventOfCode.exe
 C:\Users\ecant\Documents\Visual Studio 2015\Projects\AdventOfCode\AdventOfCode\obj\Debug\AdventOfCode.pdb
+C:\Users\ecant\Documents\Visual Studio 2015\Projects\Workspace\adventofcode\AdventOfCode\bin\Debug\AdventOfCode.exe.config
+C:\Users\ecant\Documents\Visual Studio 2015\Projects\Workspace\adventofcode\AdventOfCode\obj\Debug\AdventOfCode.exe
+C:\Users\ecant\Documents\Visual Studio 2015\Projects\Workspace\adventofcode\AdventOfCode\obj\Debug\AdventOfCode.pdb
+C:\Users\ecant\Documents\Visual Studio 2015\Projects\Workspace\adventofcode\AdventOfCode\bin\Debug\AdventOfCode.exe
+C:\Users\ecant\Documents\Visual Studio 2015\Projects\Workspace\adventofcode\AdventOfCode\bin\Debug\AdventOfCode.pdb
+C:\Users\ecant\Documents\Visual Studio 2015\Projects\Workspace\adventofcode\AdventOfCode\obj\Debug\AdventOfCode.csprojResolveAssemblyReference.cache

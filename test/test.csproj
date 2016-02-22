@@ -64,20 +64,20 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AndInstructionTests.cs" />
-    <Compile Include="CircuitSignalCalculatorTests.cs" />
+    <Compile Include="CircuitSignalCalculatorTests\AndInstructionTests.cs" />
+    <Compile Include="CircuitSignalCalculatorTests\CircuitSignalCalculatorTests.cs" />
     <Compile Include="IdealLightingConfigurationCalculatorTests\IdealLightingConfigurationCalculatorTests.cs" />
     <Compile Include="DeliveryCalculatorTests\NavigationTests.cs" />
     <Compile Include="FloorCalculatorTests\MoveTests.cs" />
     <Compile Include="IdealLightingConfigurationCalculatorTests\ToggleInstructionTests.cs" />
     <Compile Include="IdealLightingConfigurationCalculatorTests\TurnOffInstructionTests.cs" />
     <Compile Include="IdealLightingConfigurationCalculatorTests\TurnOnInstructionTests.cs" />
-    <Compile Include="InstructionFactoryTests.cs" />
-    <Compile Include="LshiftInstructionTests.cs" />
-    <Compile Include="NotInstructionTests.cs" />
-    <Compile Include="OrInstructionTests.cs" />
-    <Compile Include="RshiftInstructionTests.cs" />
-    <Compile Include="SignalInstructionTests.cs" />
+    <Compile Include="CircuitSignalCalculatorTests\InstructionFactoryTests.cs" />
+    <Compile Include="CircuitSignalCalculatorTests\LshiftInstructionTests.cs" />
+    <Compile Include="CircuitSignalCalculatorTests\NotInstructionTests.cs" />
+    <Compile Include="CircuitSignalCalculatorTests\OrInstructionTests.cs" />
+    <Compile Include="CircuitSignalCalculatorTests\RshiftInstructionTests.cs" />
+    <Compile Include="CircuitSignalCalculatorTests\SignalInstructionTests.cs" />
     <Compile Include="WrappingMaterialCalculatorTests\BoxTests.cs" />
     <Compile Include="DeliveryCalculatorTests\CoordinatesTests.cs" />
     <Compile Include="DeliveryCalculatorTests\DeliveryCalculatorTests.cs" />
