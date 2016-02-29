@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AdventOfCode.DeliveryCalculator {
   public class Navigation {
@@ -14,12 +10,14 @@ namespace AdventOfCode.DeliveryCalculator {
     public Coordinates Value { get; }
     public char Representation { get; }
 
-    public Navigation(Coordinates value, char representation) {
+    public Navigation() {}
+
+    private Navigation(Coordinates value, char representation) {
       Value = value;
       Representation = representation;
     }
 
-    public static Navigation GetNavigation(char representation) {
+    public Navigation ToNavigation(char representation) {
       if (North.Representation.Equals(representation))
         return North;
       else if (East.Representation.Equals(representation))

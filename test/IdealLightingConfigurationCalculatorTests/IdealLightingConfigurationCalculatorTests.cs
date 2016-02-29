@@ -26,9 +26,10 @@ namespace test.IdealLightingConfigurationCalculatorTests {
 
     [Fact]
     public void GivenInstructionTurnOff499x499Through500x500_WhenGetAmountOfSimpleLightingLights_ThenReturnFour() {
+      var lightingAll = InstructionFactory.GetInstruction("turn on 0,0 through 999,999");
       var lightingSome = InstructionFactory.GetInstruction("turn off 499,499 through 500,500");
-      var result = _sut.GetAmountOfSimpleLightingLights(new List<Instruction> { lightingSome });
-      Assert.Equal(result, 4);
+      var result = _sut.GetAmountOfSimpleLightingLights(new List<Instruction> { lightingAll, lightingSome });
+      Assert.Equal(result, 1000000 - 4);
     }
 
     [Fact]

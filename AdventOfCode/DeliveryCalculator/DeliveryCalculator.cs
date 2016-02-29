@@ -6,7 +6,7 @@ namespace AdventOfCode.DeliveryCalculator {
 
     public int GetTotalDeliveries(string input) {
       var coordinatesSet = new HashSet<Coordinates> { new Coordinates(0, 0) };
-      var navigationProcessor = new NavigationProcessor(coordinatesSet);
+      var navigationProcessor = new NavigationProcessor(new Navigation(), coordinatesSet);
       foreach (var c in input) {
         navigationProcessor.ProcessNavigation(c);
       }
@@ -15,8 +15,8 @@ namespace AdventOfCode.DeliveryCalculator {
 
     public int GetTotalDeliveriesSpeededUp(string input) {
       var coordinatesSet = new HashSet<Coordinates> { new Coordinates(0, 0) };
-      var firstProcessor = new NavigationProcessor(coordinatesSet);
-      var lastProcessor = new NavigationProcessor(coordinatesSet);
+      var firstProcessor = new NavigationProcessor(new Navigation(), coordinatesSet);
+      var lastProcessor = new NavigationProcessor(new Navigation(), coordinatesSet);
       for (var i = 0; i < input.Length; i+=2) {
         firstProcessor.ProcessNavigation(input.ElementAt(i));
         if (i + 1 < input.Length) {

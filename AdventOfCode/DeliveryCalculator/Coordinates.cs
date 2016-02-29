@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace AdventOfCode.DeliveryCalculator {
+﻿namespace AdventOfCode.DeliveryCalculator {
   public class Coordinates {
 
     private readonly int _x;

@@ -3,7 +3,7 @@ using System.IO;
 
 namespace AdventOfCode {
   public class OneLinerInput {
-    public static string GetInput(string path) {
+    public static string Transform(string path) {
       try {
         using (var reader = new StreamReader(path)) {
           return reader.ReadToEnd();

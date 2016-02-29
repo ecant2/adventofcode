@@ -14,7 +14,7 @@ namespace AdventOfCode.WrappingMaterialCalculator {
     }
 
     public List<Box> Transform() {
-      if (_input.Count != 0) {
+      if (_input.Count == 0) {
         try {
           using (var reader = new StreamReader(Path)) {
             string line;
@@ -22,8 +22,7 @@ namespace AdventOfCode.WrappingMaterialCalculator {
               _input.Add(Transform(line));
             }
           }
-        }
-        catch (Exception) {
+        } catch (Exception) {
           throw new ApplicationException("Could not read the input file.");
         }
       }

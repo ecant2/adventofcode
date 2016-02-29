@@ -20,7 +20,7 @@ namespace AdventOfCode.IdealLightingConfigurationCalculator {
       }
     }
 
-    public List<Instruction> GetInput() {
+    public List<Instruction> Transform() {
       return _input;
     }
   }

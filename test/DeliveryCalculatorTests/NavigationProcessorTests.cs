@@ -10,7 +10,7 @@ namespace test.DeliveryCalculatorTests {
     [Fact]
     public void GivenNoNavigation_WhenCreatingNavigationProcessor_thenCountIsOne() {
       _coordinatesSet = new HashSet<Coordinates> { new Coordinates(0, 0) };
-      _sut = new NavigationProcessor(_coordinatesSet);
+      _sut = new NavigationProcessor(new Navigation(), _coordinatesSet);
 
       Assert.Equal(_coordinatesSet.Count, 1);
     }
@@ -18,7 +18,7 @@ namespace test.DeliveryCalculatorTests {
     [Fact]
     public void GivenSingleNavigation_WhenProcessNavigation_thenCountIsTwo() {
       _coordinatesSet = new HashSet<Coordinates> { new Coordinates(0, 0) };
-      _sut = new NavigationProcessor(_coordinatesSet);
+      _sut = new NavigationProcessor(new Navigation(), _coordinatesSet);
 
       _sut.ProcessNavigation('<');
 
@@ -28,7 +28,7 @@ namespace test.DeliveryCalculatorTests {
     [Fact]
     public void GivenTwoOppositeNavigations_WhenProcessNavigation_thenCountIsTwo() {
       _coordinatesSet = new HashSet<Coordinates> { new Coordinates(0, 0) };
-      _sut = new NavigationProcessor(_coordinatesSet);
+      _sut = new NavigationProcessor(new Navigation(), _coordinatesSet);
 
       _sut.ProcessNavigation('<');
       _sut.ProcessNavigation('>');
@@ -39,7 +39,7 @@ namespace test.DeliveryCalculatorTests {
     [Fact]
     public void GivenTwoNonOppositeNavigations_WhenProcessNavigation_thenCountIsThree() {
       _coordinatesSet = new HashSet<Coordinates> { new Coordinates(0, 0) };
-      _sut = new NavigationProcessor(_coordinatesSet);
+      _sut = new NavigationProcessor(new Navigation(), _coordinatesSet);
 
       _sut.ProcessNavigation('<');
       _sut.ProcessNavigation('v');

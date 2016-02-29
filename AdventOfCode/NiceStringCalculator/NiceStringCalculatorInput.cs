@@ -10,7 +10,7 @@ namespace AdventOfCode.NiceStringCalculator {
       _path = path;
     }
 
-    public string[] GetInput() {
+    public string[] Transform() {
       return File.ReadAllLines(_path);
     }
   }

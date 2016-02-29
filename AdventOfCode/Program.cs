@@ -13,7 +13,7 @@ namespace AdventOfCode {
       var path = Console.ReadLine();
       var multiLineInput = new MultiLineInput<Instruction>(path, InstructionFactory.Instance);
       var circuitSignalCalculator = new CircuitSignalCalculator();
-      circuitSignalCalculator.CreateCircuit(multiLineInput.GetInput());
+      circuitSignalCalculator.CreateCircuit(multiLineInput.Transform());
       var signalOnA = circuitSignalCalculator.GetSignalOn("a");
       Console.WriteLine("Signal {0} is ultimately provided to wire a.", signalOnA);
       circuitSignalCalculator.SetSignalOn("b", signalOnA);
@@ -26,9 +26,9 @@ namespace AdventOfCode {
       path = Console.ReadLine();
       var idealLightingConfigurationCalculatorInput = new IdealLightingConfigurationCalculatorInput(path);
       var idealLightingConfigurationCalculator = new IdealLightingConfigurationCalculator.IdealLightingConfigurationCalculator();
-      var lightingLightsCount = idealLightingConfigurationCalculator.GetAmountOfSimpleLightingLights(idealLightingConfigurationCalculatorInput.GetInput());
+      var lightingLightsCount = idealLightingConfigurationCalculator.GetAmountOfSimpleLightingLights(idealLightingConfigurationCalculatorInput.Transform());
       Console.WriteLine("{0} lights are lit.", lightingLightsCount);
-      var totalBrightness = idealLightingConfigurationCalculator.GetAmountOfTristateLightingLights(idealLightingConfigurationCalculatorInput.GetInput());
+      var totalBrightness = idealLightingConfigurationCalculator.GetAmountOfTristateLightingLights(idealLightingConfigurationCalculatorInput.Transform());
       Console.WriteLine("{0} lights are lit.", totalBrightness);
 
       Console.WriteLine("*** Doesn't He Have Intern-Elves For This? ***");
@@ -36,9 +36,9 @@ namespace AdventOfCode {
       path = Console.ReadLine();
       var niceStringCalculatorInput = new NiceStringCalculatorInput(path);
       var niceStringCalculator = new NiceStringCalculator.NiceStringCalculator();
-      var niceStringCount = niceStringCalculator.GetNiceStringCount(niceStringCalculatorInput.GetInput());
+      var niceStringCount = niceStringCalculator.GetNiceStringCount(niceStringCalculatorInput.Transform());
       Console.WriteLine("There are {0} nice strings.", niceStringCount);
-      var nicerStringCount = niceStringCalculator.GetNicerStringCount(niceStringCalculatorInput.GetInput());
+      var nicerStringCount = niceStringCalculator.GetNicerStringCount(niceStringCalculatorInput.Transform());
       Console.WriteLine("There are {0} nicer strings.", nicerStringCount);
 
       Console.WriteLine("*** The Ideal Stocking Stuffer ***");
@@ -53,7 +53,7 @@ namespace AdventOfCode {
       Console.WriteLine("*** Perfectly Spherical Houses in a Vacuum ***");
       Console.WriteLine("Where can we find the input to help Santa delivering presents?");
       path = Console.ReadLine();
-      var input = OneLinerInput.GetInput(path);
+      var input = OneLinerInput.Transform(path);
       var deliveryCalculator = new DeliveryCalculator.DeliveryCalculator();
       var deliveryCount = deliveryCalculator.GetTotalDeliveries(input);
       Console.WriteLine("At least on present is delivered to {0} houses.", deliveryCount);
@@ -73,7 +73,7 @@ namespace AdventOfCode {
       Console.WriteLine("*** Not Quite Lisp ***");
       Console.WriteLine("Where can we find the input to help find Santa the right floor?");
       path = Console.ReadLine();
-      input = OneLinerInput.GetInput(path);
+      input = OneLinerInput.Transform(path);
       var floorCalculator = new FloorCalculator.FloorCalculator(new SingularMove());
       var floorNumber = floorCalculator.GetFinalFloorPosition(input);
       Console.WriteLine("Santa should go to the {0}th floor.", floorNumber);

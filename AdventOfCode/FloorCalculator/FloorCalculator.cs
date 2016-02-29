@@ -44,7 +44,7 @@ namespace AdventOfCode.FloorCalculator {
       return input.Count(x => x == _moveRules.Up.Representation);
     }
 
-    private static int AddMoveToFloor(Move move, int floor) {
+    private int AddMoveToFloor(Move move, int floor) {
       return floor + move.Value;
     }
   }
