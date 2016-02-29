@@ -1,4 +1,5 @@
 ﻿using System;
+using AdventOfCode.FloorCalculator;
 using AdventOfCode.IdealLightingConfigurationCalculator;
 using AdventOfCode.NiceStringCalculator;
 using AdventOfCode.WrappingMaterialCalculator;
@@ -64,16 +65,16 @@ namespace AdventOfCode {
       path = Console.ReadLine();
       var wrappingMaterialCalculatorInput = new WrappingMaterialCalculatorInput(path);
       var wrappingMaterialCalculator = new WrappingMaterialCalculator.WrappingMaterialCalculator();
-      var squareFeet = wrappingMaterialCalculator.GetTotalSquareFeetWrappingPaper(wrappingMaterialCalculatorInput.GetInput());
+      var squareFeet = wrappingMaterialCalculator.GetTotalSquareFeetWrappingPaper(wrappingMaterialCalculatorInput.Transform());
       Console.WriteLine("The elves can order {0} square feet wrapping paper.", squareFeet);
-      var feet = wrappingMaterialCalculator.GetTotalFeetRibbon(wrappingMaterialCalculatorInput.GetInput());
+      var feet = wrappingMaterialCalculator.GetTotalFeetRibbon(wrappingMaterialCalculatorInput.Transform());
       Console.WriteLine("The elves can order {0} feet ribbon.", feet);
 
       Console.WriteLine("*** Not Quite Lisp ***");
       Console.WriteLine("Where can we find the input to help find Santa the right floor?");
       path = Console.ReadLine();
       input = OneLinerInput.GetInput(path);
-      var floorCalculator = new FloorCalculator.FloorCalculator();
+      var floorCalculator = new FloorCalculator.FloorCalculator(new Move());
       var floorNumber = floorCalculator.GetFinalFloorPosition(input);
       Console.WriteLine("Santa should go to the {0}th floor.", floorNumber);
       var moveToBasement = floorCalculator.GetFirstMoveThatCausesEnteringBasement(input);
