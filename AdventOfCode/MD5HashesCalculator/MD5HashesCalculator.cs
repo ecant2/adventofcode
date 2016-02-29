@@ -7,17 +7,18 @@ namespace AdventOfCode.MD5HashesCalculator {
   public class MD5HashesCalculator {
 
     private readonly MD5 _md5;
-    private readonly StringBuilder _sb;
 
     public MD5HashesCalculator() {
       _md5 = MD5.Create();
-      _sb = new StringBuilder();
     }
 
     public int GetSuffixForSecretKeyResultingInHashWithLeadingZeros(string secretKey, int numberOfLeadingZeros) {
       var leadingZeros = string.Concat(Enumerable.Repeat('0', numberOfLeadingZeros));
       var suffix = 0;
-      while (!ConvertTohexadecimal(CreateHash(secretKey + suffix++)).StartsWith(leadingZeros)) {}
+      var convert = ConvertToHexadecimal(CreateHash(secretKey + suffix++));
+      while (!convert.StartsWith(leadingZeros)) {
+        convert = ConvertToHexadecimal(CreateHash(secretKey + suffix++));
+      }
       return --suffix;
     }
 
@@ -26,12 +27,12 @@ namespace AdventOfCode.MD5HashesCalculator {
       return _md5.ComputeHash(inputBytes);
     }
 
-    private string ConvertTohexadecimal(byte[] hash) {
-      _sb.Clear();
+    private string ConvertToHexadecimal(byte[] hash) {
+      var sb = new StringBuilder();
       foreach (byte t in hash) {
-        _sb.Append(t.ToString("X2"));
+        sb.Append(t.ToString("X2"));
       }
-      return _sb.ToString();
+      return sb.ToString();
     }
   }
 }
