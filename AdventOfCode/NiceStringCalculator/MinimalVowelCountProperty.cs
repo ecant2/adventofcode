@@ -13,7 +13,7 @@ namespace AdventOfCode.NiceStringCalculator {
       _matchesCount = matchesCount;
     }
 
-    public bool DoesSatisfy(string input) {
+    public bool Satisfies(string input) {
       var matches = 0;
       for (var index = 0; index < _vowels.Count; index++) {
         var currentmatch = input.Count(x => x == _vowels.ElementAt(index));

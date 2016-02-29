@@ -11,7 +11,7 @@ namespace AdventOfCode.NiceStringCalculator {
       _matchesCount = matchesCount;
     }
 
-    public bool DoesSatisfy(string input) {
+    public bool Satisfies(string input) {
       var matches = 0;
       foreach (var dupliatedCharacter in input.Select(c => string.Concat(Enumerable.Repeat(c, _plurality)))) {
         if (input.Contains(dupliatedCharacter))

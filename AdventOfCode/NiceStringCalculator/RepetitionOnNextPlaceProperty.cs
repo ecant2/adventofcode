@@ -11,7 +11,7 @@ namespace AdventOfCode.NiceStringCalculator {
       _placesFurther = placesFurther;
     }
 
-    public bool DoesSatisfy(string input) {
+    public bool Satisfies(string input) {
       for (int index = 0; index <= input.Length - _patternLength - _placesFurther; index++) {
         var pattern = input.Substring(index, _patternLength);
         var possibleRepetition = input.Substring(index + _placesFurther, _patternLength);

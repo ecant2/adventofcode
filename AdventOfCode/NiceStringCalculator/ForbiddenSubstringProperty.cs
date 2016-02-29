@@ -10,7 +10,7 @@ namespace AdventOfCode.NiceStringCalculator {
       _forbiddenSubstrings = forbiddenSubstrings;
     }
 
-    public bool DoesSatisfy(string input) {
+    public bool Satisfies(string input) {
       return !_forbiddenSubstrings.Any(input.Contains);
     }
   }

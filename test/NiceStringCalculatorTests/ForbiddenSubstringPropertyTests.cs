@@ -12,32 +12,32 @@ namespace test.NiceStringCalculatorTests {
     }
 
     [Fact]
-    public void GivenInputugknbfddgicrmopn_WhenDoesSatisfy_ThenReturnTrue() {
-      var result = _sut.DoesSatisfy("ugknbfddgicrmopn");
+    public void GivenInputugknbfddgicrmopn_WhenSatisfies_ThenReturnTrue() {
+      var result = _sut.Satisfies("ugknbfddgicrmopn");
       Assert.Equal(result, true);
     }
 
     [Fact]
-    public void GivenInputaaa_WhenDoesSatisfy_ThenReturnTrue() {
-      var result = _sut.DoesSatisfy("aaa");
+    public void GivenInputaaa_WhenSatisfies_ThenReturnTrue() {
+      var result = _sut.Satisfies("aaa");
       Assert.Equal(result, true);
     }
 
     [Fact]
-    public void GivenInputjchzalrnumimnmhp_WhenDoesSatisfy_ThenReturnTrue() {
-      var result = _sut.DoesSatisfy("jchzalrnumimnmhp");
+    public void GivenInputjchzalrnumimnmhp_WhenSatisfies_ThenReturnTrue() {
+      var result = _sut.Satisfies("jchzalrnumimnmhp");
       Assert.Equal(result, true);
     }
 
     [Fact]
-    public void GivenInputhaegwjzuvuyypxyu_WhenDoesSatisfy_ThenReturnFalse() {
-      var result = _sut.DoesSatisfy("haegwjzuvuyypxyu");
+    public void GivenInputhaegwjzuvuyypxyu_WhenSatisfies_ThenReturnFalse() {
+      var result = _sut.Satisfies("haegwjzuvuyypxyu");
       Assert.Equal(result, false);
     }
 
     [Fact]
-    public void GivenInputdvszwmarrgswjxmb_WhenDoesSatisfy_ThenReturnTrue() {
-      var result = _sut.DoesSatisfy("dvszwmarrgswjxmb");
+    public void GivenInputdvszwmarrgswjxmb_WhenSatisfies_ThenReturnTrue() {
+      var result = _sut.Satisfies("dvszwmarrgswjxmb");
       Assert.Equal(result, true);
     }
   }

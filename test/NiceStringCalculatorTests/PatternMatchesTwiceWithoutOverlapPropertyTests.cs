@@ -11,25 +11,25 @@ namespace test.NiceStringCalculatorTests {
 
     [Fact]
     public void GivenInputqjhvhtzxzqqjkmpb_WhenDoesSatisfy_ThenReturnTrue() {
-      var result = _sut.DoesSatisfy("qjhvhtzxzqqjkmpb");
+      var result = _sut.Satisfies("qjhvhtzxzqqjkmpb");
       Assert.Equal(result, true);
     }
 
     [Fact]
     public void GivenInputxxyxx_WhenDoesSatisfy_ThenReturnTrue() {
-      var result = _sut.DoesSatisfy("xxyxx");
+      var result = _sut.Satisfies("xxyxx");
       Assert.Equal(result, true);
     }
 
     [Fact]
     public void GivenInputuurcxstgmygtbstg_WhenDoesSatisfy_ThenReturnTrue() {
-      var result = _sut.DoesSatisfy("uurcxstgmygtbstg");
+      var result = _sut.Satisfies("uurcxstgmygtbstg");
       Assert.Equal(result, true);
     }
 
     [Fact]
     public void GivenInputieodomkazucvgmuy_WhenDoesSatisfy_ThenReturnFalse() {
-      var result = _sut.DoesSatisfy("ieodomkazucvgmuy");
+      var result = _sut.Satisfies("ieodomkazucvgmuy");
       Assert.Equal(result, false);
     }
   }

@@ -4,25 +4,14 @@ using System.IO;
 
 namespace AdventOfCode.NiceStringCalculator {
   internal class NiceStringCalculatorInput {
-
-    private readonly List<string> _input;
+    private readonly string _path;
 
     public NiceStringCalculatorInput(string path) {
-      _input = new List<string>();
-      try {
-        using (var reader = new StreamReader(path)) {
-          string line;
-          while ((line = reader.ReadLine()) != null) {
-            _input.Add(line);
-          }
-        }
-      } catch (Exception) {
-        throw new ApplicationException("Could not read the input file.");
-      }
+      _path = path;
     }
 
-    public List<string> GetInput() {
-      return _input;
+    public string[] GetInput() {
+      return File.ReadAllLines(_path);
     }
   }
 }

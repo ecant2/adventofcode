@@ -12,7 +12,7 @@ namespace AdventOfCode.NiceStringCalculator {
       _patternLength = patternLength;
     }
 
-    public bool DoesSatisfy(string input) {
+    public bool Satisfies(string input) {
       for (var index = 0; index <= input.Length - _patternLength; index++) {
         var pattern = input.Substring(index, _patternLength);
         var remaining = input.Substring(index + _patternLength, input.Length - index - _patternLength);
