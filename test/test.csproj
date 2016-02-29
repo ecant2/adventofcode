@@ -66,9 +66,10 @@
   <ItemGroup>
     <Compile Include="CircuitSignalCalculatorTests\AndInstructionTests.cs" />
     <Compile Include="CircuitSignalCalculatorTests\CircuitSignalCalculatorTests.cs" />
+    <Compile Include="FloorCalculatorTests\DualMoveTests.cs" />
     <Compile Include="IdealLightingConfigurationCalculatorTests\IdealLightingConfigurationCalculatorTests.cs" />
     <Compile Include="DeliveryCalculatorTests\NavigationTests.cs" />
-    <Compile Include="FloorCalculatorTests\MoveTests.cs" />
+    <Compile Include="FloorCalculatorTests\SingularMoveTests.cs" />
     <Compile Include="IdealLightingConfigurationCalculatorTests\ToggleInstructionTests.cs" />
     <Compile Include="IdealLightingConfigurationCalculatorTests\TurnOffInstructionTests.cs" />
     <Compile Include="IdealLightingConfigurationCalculatorTests\TurnOnInstructionTests.cs" />

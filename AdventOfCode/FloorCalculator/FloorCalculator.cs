@@ -10,8 +10,12 @@ namespace AdventOfCode.FloorCalculator {
       _moveRules = moveRules;
     }
 
-    public int GetFinalFloorPosition(string input) {
+    public int GetFinalFloorPositionEx(string input) {
       return GetMoveUpCount(input) - GetMoveDownCount(input);
+    }
+
+    public int GetFinalFloorPosition(string input) {
+      return input.Select(c => _moveRules.ToMove(c)).Sum(m => m.Value);
     }
 
     public int GetFirstMoveThatCausesEnteringBasementEx(string input) {
@@ -23,15 +27,21 @@ namespace AdventOfCode.FloorCalculator {
     }
 
     public int GetFirstMoveThatCausesEnteringBasement(string input) {
-      return input.Select(c => _moveRules.ToMove(c)).Sum(m => m.Value);
+      var result = 0;
+      var floor = 0;
+
+      while (floor != Basement) {
+        floor = AddMoveToFloor(_moveRules.ToMove(input.ElementAt(result++)), floor);
+      }
+      return result;
     }
 
-    private static int GetMoveDownCount(string input) {
-      return input.Count(x => x == Move.Down.Representation);
+    private int GetMoveDownCount(string input) {
+      return input.Count(x => x == _moveRules.Down.Representation);
     }
 
-    private static int GetMoveUpCount(string input) {
-      return input.Count(x => x == Move.Up.Representation);
+    private int GetMoveUpCount(string input) {
+      return input.Count(x => x == _moveRules.Up.Representation);
     }
 
     private static int AddMoveToFloor(Move move, int floor) {

@@ -74,7 +74,7 @@ namespace AdventOfCode {
       Console.WriteLine("Where can we find the input to help find Santa the right floor?");
       path = Console.ReadLine();
       input = OneLinerInput.GetInput(path);
-      var floorCalculator = new FloorCalculator.FloorCalculator(new Move());
+      var floorCalculator = new FloorCalculator.FloorCalculator(new SingularMove());
       var floorNumber = floorCalculator.GetFinalFloorPosition(input);
       Console.WriteLine("Santa should go to the {0}th floor.", floorNumber);
       var moveToBasement = floorCalculator.GetFirstMoveThatCausesEnteringBasement(input);

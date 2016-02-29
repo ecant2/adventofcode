@@ -53,6 +53,8 @@
     <Compile Include="CircuitSignalCalculator\Instruction.cs" />
     <Compile Include="CircuitSignalCalculator\LshiftGate.cs" />
     <Compile Include="CircuitSignalCalculator\LshiftInstructionParser.cs" />
+    <Compile Include="FloorCalculator\DualMove.cs" />
+    <Compile Include="FloorCalculator\SingularMove.cs" />
     <Compile Include="MultiLineInput.cs" />
     <Compile Include="DeliveryCalculator\Coordinates.cs" />
     <Compile Include="DeliveryCalculator\DeliveryCalculator.cs" />

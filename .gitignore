@@ -1,7 +1,7 @@
 /packages
 /AdventOfCode/bin
 /AdventOfCode/obj
-/tests/bin
-/tests/obj
+/test/bin
+/test/obj
 .vscode/
 .vs/
