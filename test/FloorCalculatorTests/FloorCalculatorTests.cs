@@ -7,7 +7,7 @@ namespace test.FloorCalculatorTests {
     private readonly FloorCalculator _sut;
 
     public FloorCalculatorTests() {
-      _sut = new FloorCalculator();
+      _sut = new FloorCalculator(new Move());
     }
 
     [Fact]

@@ -2,8 +2,13 @@
 
 namespace AdventOfCode.FloorCalculator {
   public class FloorCalculator {
+    private readonly Move _moveRules;
 
     private const int Basement = -1;
+
+    public FloorCalculator(Move moveRules) {
+      _moveRules = moveRules;
+    }
 
     public int GetFinalFloorPosition(string input) {
       return GetMoveUpCount(input) - GetMoveDownCount(input);
@@ -18,13 +23,7 @@ namespace AdventOfCode.FloorCalculator {
     }
 
     public int GetFirstMoveThatCausesEnteringBasement(string input) {
-      var result = 0;
-      var floor = 0;
-
-      while (floor != Basement) {
-        floor = AddMoveToFloor(Move.GetMove(input.ElementAt(result++)), floor);
-      }
-      return result;
+      return input.Select(c => _moveRules.ToMove(c)).Sum(m => m.Value);
     }
 
     private static int GetMoveDownCount(string input) {

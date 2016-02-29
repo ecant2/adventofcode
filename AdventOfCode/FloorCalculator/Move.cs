@@ -10,12 +10,14 @@ namespace AdventOfCode.FloorCalculator {
     public int Value { get; }
     public char Representation { get; }
 
-    public Move(int value, char representation) {
+    public Move() {}
+
+    private Move(int value, char representation) {
       Value = value;
       Representation = representation;
     }
 
-    public static Move GetMove(char representation) {
+    public Move ToMove(char representation) {
       if (Up.Representation.Equals(representation))
         return Up;
       if (Down.Representation.Equals(representation))
